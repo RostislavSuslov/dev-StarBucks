@@ -1,20 +1,20 @@
 [
     {
         "type": "File",
-        "name": "d:\\Project\\dev-project\\dev-Fill&Sin\\dev\\sass\\_colors.scss",
+        "name": "d:\\LemonSchool\\18.11 Middle\\dev-StarBucks\\dev\\sass\\variables.scss",
         "parent_id": null,
-        "fsPath": "d:\\Project\\dev-project\\dev-Fill&Sin\\dev\\sass\\_colors.scss",
+        "fsPath": "d:\\LemonSchool\\18.11 Middle\\dev-StarBucks\\dev\\sass\\variables.scss",
         "workspaceRoot": null,
         "workspacePath": null,
-        "id": "p6ogKsvJ5Inc9bd3"
+        "id": "Yoesad7nugFEhzTw"
     },
     {
         "type": "File",
-        "name": "d:\\Project\\dev-project\\dev-Fill&Sin\\dev\\style.scss",
+        "name": "d:\\LemonSchool\\18.11 Middle\\dev-StarBucks\\dev\\sass\\global.scss",
         "parent_id": null,
-        "fsPath": "d:\\Project\\dev-project\\dev-Fill&Sin\\dev\\style.scss",
+        "fsPath": "d:\\LemonSchool\\18.11 Middle\\dev-StarBucks\\dev\\sass\\global.scss",
         "workspaceRoot": null,
         "workspacePath": null,
-        "id": "U2AJb6PcVDlMBoeQ"
+        "id": "uH5Z8hBORxt6NJLg"
     }
 ]
