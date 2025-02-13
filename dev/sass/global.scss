@@ -13,6 +13,7 @@ html {
     font-size: $font-size;
     background-color: $bg-color;
     color: $text;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -68,6 +69,48 @@ img {
     margin-left: auto;
     margin-right: auto;
 }
+
+.btn {
+    &.btn-outline {
+        width: 84px;
+        height: 84px;
+        border: 1px solid $primary-color;
+        border-radius: 29px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            height: 37px;
+        }
+    }
+}
+
+
+
+.svg-sprite {
+    height: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ::selection {
     color: $bg-color;
