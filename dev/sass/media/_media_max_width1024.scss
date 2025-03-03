@@ -1,6 +1,6 @@
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024.99px) {
     header {
-        padding: 34px 0;
+        padding: 29px 0;
 
         >.container {
             gap: 0;
@@ -53,6 +53,9 @@
     }
 
     .btn {
+        font-size: 16px;
+        padding: 17px 24px;
+
         &.btn-outline {
             width: 52px;
             height: 52px;
@@ -61,6 +64,64 @@
             svg {
                 height: 22px;
             }
+        }
+    }
+
+    .banner {
+        .container {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: min(12vw, 48px);
+            margin-bottom: 36px;
+        }
+
+        .banner-description {
+            margin-bottom: 36px;
+            font-size: 0.75rem;
+        }
+
+        &-btn-group {
+            gap: 10px;
+            margin-bottom: 36px;
+        }
+
+        div.banner-img {
+            padding: 0 96px;
+            margin-right: 0;
+        }
+
+        .banner-img:after {
+            display: none;
+        }
+
+
+        .banner-discount {
+            right: 100px;
+        }
+
+        .banner-img:before {
+            display: none;
+        }
+
+        .banner-line {
+            width: 100%;
+            top: -140px;
+            right: 12px;
+        }
+
+        .banner-statistic-item {
+            width: auto;
+        }
+
+        .banner-statistic__title {
+            font-size: 42px;
+        }
+
+        .banner-statistic__subtitle {
+            font-size: 12px;
         }
     }
 

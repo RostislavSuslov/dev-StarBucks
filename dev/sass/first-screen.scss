@@ -1,10 +1,173 @@
 .banner {
+    padding-bottom: 100px;
+    position: relative;
+
+    // overflow: hidden;
+    // &:before {
+    //         content: "";
+    //         position: absolute;
+    //         right: -123px;
+    //         bottom: -136px;
+    //         width: 1100px;
+    //         height: 676px;
+    //         z-index: -1;
+    //         background: url(./assets/img/decoration__banner-line.svg) center no-repeat;
+    //     }
     .container {
         display: flex;
+        align-items: flex-start;
         gap: 24px;
+        justify-content: space-between;
     }
 
     &-content {
         max-width: 574px;
     }
+
+    h1 {
+        font-size: min(6vw, 80px);
+        font-weight: 800;
+        margin-bottom: 54px;
+        position: relative;
+
+        &::before {
+            @include template-light;
+            width: 586px;
+            height: 653px;
+            background: url(./assets/img/decoration__banner-light-title.png) center no-repeat;
+            left: 0;
+            top: -200px;
+            transform: none;
+        }
+    }
+
+    &-description {
+        @extend h6;
+        color: $text;
+        font-weight: 400;
+        margin-bottom: 54px;
+        max-width: 400px;
+    }
+
+    &-btn-group {
+        gap: 16px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 54px;
+        position: relative;
+
+        &:before {
+            @include template-light;
+            width: 603px;
+            height: 603px;
+            background: url(./assets/img/decoration__banner-light-btn-row.png) center no-repeat;
+            left: 100px;
+            top: 0;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &-statistic__title {
+        font-size: 62px;
+    }
+
+    &-statistic__subtitle {
+        font-size: 20px;
+    }
+
+    &-statistics {
+        display: flex;
+        gap: 46px;
+    }
+
+    &-statistic-item {
+        width: 126px;
+    }
+
+
+    .banner-img {
+        margin-right: 43px;
+        position: relative;
+
+        &:before {
+            @include template-light;
+            width: 479px;
+            height: 479px;
+            background: url(./assets/img/decoration__banner-light-img.png) center no-repeat;
+            left: -160px;
+            top: 160px;
+            transform: translate(0, -50%);
+        }
+
+        &:after {
+            @include template-light;
+            width: 676px;
+            height: 676px;
+            background: url(./assets/img/decoration__banner-light-img_md.png) center no-repeat;
+            left: -50px;
+            top: calc(100% - 115px);
+            transform: translate(0, -50%);
+           
+        }
+
+
+
+    }
+
+    .banner-discount {
+        // width: 184px;
+        // height: 184px;
+        --max-size: 184px;
+        --size: 14.154vw;
+        width: var(--size);
+        height: var(--size);
+        max-width: var(--max-size);
+        max-height: var(--max-size);
+        background: url(./assets/img/bg-discount.svg) center / 100% no-repeat;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #fff;
+        font-size: 55px;
+        font-size: Min(4.231vw, 55px);
+        font-weight: 500;
+        position: absolute;
+        top: 0;
+        right: 38px;
+        z-index: 1;
+        &:before {
+            content: "";
+            position: absolute;
+            width: calc(100% - 42px);
+            height: calc(100% - 42px);
+            box-shadow: -4.56px 15.52px 26.48px #143e287a;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: -1;
+        }
+    }
+
+    .banner-line {
+        width: 1102px;
+        height: 677px;
+        position: absolute;
+        top: 200px;
+        right: -470px;
+        z-index: -1;
+    }
 }
+
+// &:before {
+//     content: "";
+//     position: absolute;
+//     right: -461px;
+//     bottom: -246px;
+//     width: 1100px;
+//     height: 676px;
+//     z-index: -1;
+//     background: url(./assets/img/decoration__banner-line.svg) center no-repeat;
+// }
