@@ -1,7 +1,72 @@
 .advantages-row {
     padding: 50px 78px 36px;
     border-radius: 46px;
-    background: linear-gradient(230deg, #fff 3.94%, #e5e5e5 64.08%, #fbfbfb 88.62%);
+    position: relative;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    max-width: 1029px;
+    margin: 0 auto;
 
-    height: 372px;  /*delete*/
+    .accent-label-sm {
+        top: -50px;
+        left: -50px;
+    }
+
+    &:before {
+        --size: 750px;
+        @include template-light;
+        width: var(--size);
+        height: var(--size);
+        background: url(./assets/img/decoration__advantages-accent.png) center no-repeat;
+        left: 100px;
+        top: 150px;
+    
+    }
+    &:after {
+        --size: 600px;
+        @include template-light;
+        width: var(--size);
+        height: var(--size);
+        background: url(./assets/img/decoration__advantages-light.png) center no-repeat;
+        left: 100%;
+        top: 100%;
+    }
 }
+
+.advantage__description {
+    color: #292C2D;
+}
+
+.advantage {
+    max-width: 228px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img-box {
+        position: relative;
+        --size: 148px;
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+        box-shadow: 0 4px 41px 0 rgba(0, 0, 0, 0.39);
+        margin: 12px;
+        @extend .gradient-background;
+
+        img {
+            max-width: 220px;
+            max-height: 220px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    &__title {
+        z-index: 1;
+    }
+}
+
+

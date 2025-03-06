@@ -97,11 +97,6 @@
             display: none;
         }
 
-
-        .banner-discount {
-            right: 100px;
-        }
-
         .banner-img:before {
             display: none;
         }
@@ -124,6 +119,10 @@
         .banner-statistic__subtitle {
             font-size: 12px;
         }
+    }
+
+    .accent-label {
+        right: 100px;
     }
 
     .footer {
