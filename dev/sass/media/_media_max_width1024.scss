@@ -88,8 +88,8 @@
             margin-bottom: 36px;
         }
 
-        div.banner-img {
-            padding: 0 96px;
+        .banner-img {
+            padding: 0 60px;
             margin-right: 0;
         }
 
@@ -108,8 +108,9 @@
 
         .banner-line {
             width: 100%;
-            top: -140px;
-            right: 12px;
+            left: 8vw;
+            bottom: -21vw;
+            top: initial;
         }
 
         .banner-statistic-item {
