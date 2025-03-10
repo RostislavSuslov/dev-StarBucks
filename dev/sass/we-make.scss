@@ -1,4 +1,43 @@
+.we-make {
+    .container {
+        display: flex;
+        position: relative;
+        gap: 0 24px;
+        justify-content: space-between;
+    }
+
+    &__img-box {
+        max-width: 465px;
+        position: relative;
+
+        img {
+         @include clip-right;
+        }
+
+        &::before {
+            content: "";
+            background-color: $primary-color;
+            top: 36px;
+            right: 49px;
+            width: calc(100% - 3px);
+            height: calc(100% - 3px);
+            position: absolute;
+            z-index: -1;
+            @include clip-right;
+        }
+    }
+
+    &__content-box {
+        max-width: 470px;
+        width: 100%;
+    }
+}
+
 .we-make__line {
-    width:993px; 
-    height:999px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 993px;
+    height: 999px;
+    display: none;
 }

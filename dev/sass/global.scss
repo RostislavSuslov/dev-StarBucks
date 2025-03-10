@@ -23,6 +23,11 @@ body {
     overflow-x: hidden;
 }
 
+
+section {
+    margin-bottom: $section-margin;
+}
+
 h1,
 h2,
 h3,
@@ -62,6 +67,21 @@ h5 {
 h6 {
     font-size: 1.25rem;
     line-height: 1.63;
+}
+
+
+.template-title {
+    font-size: min(6vw, 80px);
+    font-weight: 800;
+    position: relative;
+}
+
+.template-description {
+    @extend h6;
+    color: $text;
+    font-weight: 400;
+    margin-bottom: 54px;
+    max-width: 480px;
 }
 
 img {
@@ -189,8 +209,8 @@ a {
     text-transform: uppercase;
     z-index: 1;
     box-shadow: -4.56px 15.52px 26.48px #143e287a;
-   
-    
+
+
 
     &:after {
         content: "";
