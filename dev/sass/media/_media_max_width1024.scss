@@ -125,6 +125,58 @@
         right: 100px;
     }
 
+    .accent-label-sm {
+        font-size: 24px;
+    }
+
+    .advantages {
+        margin-bottom: 68px;
+    }
+
+    .advantages-row {
+        flex-direction: column;
+        max-width: 218px;
+        padding: 20px 42px;
+        border-radius: 26px;
+        gap: 24px;
+
+        .accent-label-sm {
+            left: initial;
+            right: -24px;
+            top: -24px;
+        }
+
+        &:before {
+            left: calc(100% - 24px);
+            top: 50px;
+        }
+
+        &:after {
+            left: 80px;
+        }
+    }
+
+
+    .advantage__img-box {
+        --size: 86px;
+        margin: 8px;
+
+        img {
+            max-width: 124px;
+            max-height: 124px;
+        }
+    }
+
+    .advantage__title {
+        font-size: 1.123rem;
+        margin-bottom: 0;
+    }
+
+    .advantage__description {
+        font-size: 0.75rem;
+        margin-bottom: 0;
+    }
+
     .footer {
         padding: 37px 0 7px;
 
