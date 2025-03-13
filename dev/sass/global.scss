@@ -74,6 +74,7 @@ h6 {
     font-size: min(6vw, 80px);
     font-weight: 800;
     position: relative;
+    letter-spacing: -0.03em;
 }
 
 .template-description {
@@ -82,6 +83,7 @@ h6 {
     font-weight: 400;
     margin-bottom: 54px;
     max-width: 480px;
+    letter-spacing: -0.02em;
 }
 
 img {
@@ -95,6 +97,10 @@ a {
     }
 }
 
+button {
+    cursor: pointer;
+}
+
 .btn {
     color: $title-color;
     font-size: 24px;
@@ -103,11 +109,10 @@ a {
     text-decoration: none;
     padding: 23px 54px;
     background: transparent;
-    display: inline-block;
     text-align: center;
     transition: .3s;
     position: relative;
-
+    display: inline-flex;
 
     &:after {
         @include template-light;
@@ -124,6 +129,12 @@ a {
             width: 500%;
             height: 500%;
         }
+    }
+
+    svg {
+        --size: 28px;
+        height: var(--size);
+        width: var(--size);
     }
 
     &.btn-primary {
@@ -247,6 +258,10 @@ a {
     p {
         color: #292C2E;
     }
+}
+
+.overflow-hidden {
+    overflow: hidden;
 }
 
 ::selection {
