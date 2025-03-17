@@ -1,7 +1,7 @@
 const burger = document.querySelector('#btn-burger')
 const mobileContainer = document.querySelector('#mobile-container')
 
-burger.addEventListener('click', ()=> {
+burger.addEventListener('click', () => {
     burger.classList.toggle('active')
     mobileContainer.classList.toggle('show')
 })
@@ -9,29 +9,64 @@ burger.addEventListener('click', ()=> {
 
 /*modal*/
 
-const btnTrigerProcess = document.querySelector('[data-triger-modal="process"]');
+const modalTrigers = document.querySelectorAll('[data-triger-modal]');
+const modalClose = document.querySelectorAll('[data-modal-close]')
 const overlay = document.querySelector('.overlay')
 const body = document.querySelector('body')
-const modal = document.querySelector('.modal')
-const btnModalClose = document.querySelector('[data-modal="close"]')
-
-console.log(btnModalClose);
 
 
-function showModal(event) {
-    overlay.classList.add('show')
-    modal.classList.add('show')
+function showModal() {
     body.classList.add('overflow-hidden')
-    event.preventDefault() 
+    overlay.classList.add('show')
 }
 
-function closeModal(event) {
-    overlay.classList.remove('show')
-    modal.classList.remove('show')
+function closeModal() {
+    const openModal = document.querySelector('.modal.show');
     body.classList.remove('overflow-hidden')
-    event.preventDefault() 
+    overlay.classList.remove('show')
+    openModal.classList.remove('show')
 }
 
-btnTrigerProcess.addEventListener('click', showModal)
+modalTrigers.forEach(item => {
+    item.addEventListener('click', function(event) {
+        event.preventDefault()
 
-btnModalClose.addEventListener('click', closeModal)
+        const dataTriger = item.getAttribute('data-triger-modal')
+        const modal = document.querySelector('#' + dataTriger)
+
+        showModal()
+        modal.classList.add('show')
+    })
+})
+
+modalClose.forEach(close => {
+    close.addEventListener('click', closeModal)
+})
+
+// const fruits = ['apple', 'banana', 'cherry'];
+// fruits.forEach(fruit => {
+//     console.log(fruit);
+// });
+
+// function showModal(event) {
+//     overlay.classList.add('show')
+//     modal.classList.add('show')
+//     body.classList.add('overflow-hidden')
+//     event.preventDefault() 
+// }
+
+// btnTrigerProcess.addEventListener('click', showModal)
+
+// btnModalClose.addEventListener('click', function(event) {
+//     overlay.classList.remove('show')
+//     modal.classList.remove('show')
+//     body.classList.remove('overflow-hidden')
+//     event.preventDefault() 
+// })
+
+// btnModalClose.addEventListener('click', (event)=> {
+//     overlay.classList.remove('show')
+//     modal.classList.remove('show')
+//     body.classList.remove('overflow-hidden')
+//     event.preventDefault() 
+// })

@@ -113,6 +113,7 @@ button {
     transition: .3s;
     position: relative;
     display: inline-flex;
+    align-items: center;
 
     &:after {
         @include template-light;
@@ -179,7 +180,7 @@ button {
         display: flex;
         align-items: center;
         justify-content: center;
-
+        padding: 12px;
         svg {
             height: 37px;
         }
@@ -262,6 +263,34 @@ button {
 
 .overflow-hidden {
     overflow: hidden;
+}
+
+.g-0 {
+    gap: 0;
+}
+
+.g-1 {
+    gap: 1rem;
+}
+
+.g-2 {
+    gap: 2rem;
+}
+
+.g-3 {
+    gap: 3rem;
+}
+
+.g-4 {
+    gap: 4rem;
+}
+
+.g-5 {
+    gap: 5rem;
+}
+
+.bg-test {
+    background: none deeppink!important;
 }
 
 ::selection {

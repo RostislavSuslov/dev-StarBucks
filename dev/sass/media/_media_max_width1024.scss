@@ -29,7 +29,7 @@
     .container {
         padding: 0 25px;
     }
-    
+
     .mobile-container {
         position: absolute;
         left: 0;
@@ -42,11 +42,16 @@
         transition: .3s;
         visibility: hidden;
         transform: translate(0, -100%);
+        flex-direction: column;
 
         &.show {
-            top: 97px;
+            top: 48px;
             transform: translate(0, 0);
             visibility: visible;
+        }
+
+        .btn {
+            margin-left: initial;
         }
     }
 
@@ -79,7 +84,7 @@
     }
 
     .banner {
-        
+
         .container {
             flex-direction: column-reverse;
             align-items: center;

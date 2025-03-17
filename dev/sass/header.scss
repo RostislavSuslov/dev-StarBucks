@@ -2,14 +2,15 @@ header {
     padding: 48px 0;
     position: relative;
 
- 
+
 
     >.container {
+        --gap: 94px;
         display: flex;
         align-items: center;
-        gap: 94px;
+        gap: var(--gap);
         position: relative;
-       
+
     }
 
     .btn-burger {
@@ -22,17 +23,29 @@ header {
     z-index: 1;
 }
 
+.mobile-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: var(--gap);
+    z-index: 2;
+
+    .btn {
+        margin-left: auto;
+    }
+}
+
 .menu {
     &__list {
         display: flex;
-        gap: 94px;
+        gap: var(--gap);
     }
-    
+
     &__link {
         font-size: 20px;
         color: $text;
         text-decoration: none;
-      
+
     }
 }
 
@@ -44,6 +57,7 @@ header {
     height: 20px;
     position: relative;
     padding: 12px 24px;
+
     span {
         position: absolute;
         left: 0;
@@ -67,6 +81,7 @@ header {
         span {
             transform: rotate(45deg);
             top: 8px;
+
             &:nth-child(2) {
                 top: 8px;
                 transform: rotate(-45deg);

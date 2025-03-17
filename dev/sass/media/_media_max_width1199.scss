@@ -1,4 +1,9 @@
 @media screen and (max-width: 1199.99px) {
+    header {
+        > .container {
+            --gap: 72px;
+        }
+    }
 
     .advantages-row {
         .accent-label-sm {
