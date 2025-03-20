@@ -1,5 +1,80 @@
-const burger = document.querySelector('#btn-burger')
-const mobileContainer = document.querySelector('#mobile-container')
+const burger = document.querySelector('#btn-burger');
+const mobileContainer = document.querySelector('#mobile-container');
+const processVideo = document.querySelector('#video');
+const play = document.querySelector('#play')
+const stop = document.querySelector('#stop')
+
+const html = document.querySelector('#html')
+const css = document.querySelector('#css')
+const js = document.querySelector('#js')
+
+const rangeInput = document.querySelector('#volume-range')
+
+const pause = document.querySelector('#pause')
+
+pause.addEventListener('click', () => {
+    pauseVideo();
+    console.log('pause');
+})
+
+function pauseVideo() {
+    processVideo.pause();
+}
+
+function currentHTML() {
+    video.currentTime = 60;
+}
+
+function currentCSS() {
+    video.currentTime = 120;
+}
+
+function currentJS() {
+    video.currentTime = 200;
+}
+
+function playVideo() {
+    processVideo.play();
+}
+
+function stopVideo() {
+    video.pause();
+    video.currentTime = 0;
+}
+
+
+html.addEventListener('click', () => {
+    currentHTML();
+    video.volume = 0.5;
+})
+
+css.addEventListener('click', () => {
+    currentCSS()
+})
+
+js.addEventListener('click', () => {
+    currentJS()
+})
+
+
+stop.addEventListener('click', () => {
+    stopVideo();
+    console.log('stop');
+})
+
+play.addEventListener('click', () => {
+    playVideo();
+    console.log('play');
+})
+
+
+
+
+
+
+
+
+ 
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('active')
@@ -14,10 +89,14 @@ const modalClose = document.querySelectorAll('[data-modal-close]')
 const overlay = document.querySelector('.overlay')
 const body = document.querySelector('body')
 
-
 function showModal() {
+    
+
     body.classList.add('overflow-hidden')
     overlay.classList.add('show')
+   
+
+   
 }
 
 function closeModal() {
@@ -25,9 +104,10 @@ function closeModal() {
     body.classList.remove('overflow-hidden')
     overlay.classList.remove('show')
     openModal.classList.remove('show')
+    stopVideo();
 }
 
-modalTrigers.forEach(item => {
+modalTrigers.forEach((item) => {
     item.addEventListener('click', function(event) {
         event.preventDefault()
 
@@ -35,7 +115,14 @@ modalTrigers.forEach(item => {
         const modal = document.querySelector('#' + dataTriger)
 
         showModal()
-        modal.classList.add('show')
+        
+
+        if(modal.classList.contains('video-provecess')) {
+            modal.classList.add('show')
+            playVideo()
+        } else {
+            modal.classList.add('show')
+        }
     })
 })
 
@@ -43,30 +130,3 @@ modalClose.forEach(close => {
     close.addEventListener('click', closeModal)
 })
 
-// const fruits = ['apple', 'banana', 'cherry'];
-// fruits.forEach(fruit => {
-//     console.log(fruit);
-// });
-
-// function showModal(event) {
-//     overlay.classList.add('show')
-//     modal.classList.add('show')
-//     body.classList.add('overflow-hidden')
-//     event.preventDefault() 
-// }
-
-// btnTrigerProcess.addEventListener('click', showModal)
-
-// btnModalClose.addEventListener('click', function(event) {
-//     overlay.classList.remove('show')
-//     modal.classList.remove('show')
-//     body.classList.remove('overflow-hidden')
-//     event.preventDefault() 
-// })
-
-// btnModalClose.addEventListener('click', (event)=> {
-//     overlay.classList.remove('show')
-//     modal.classList.remove('show')
-//     body.classList.remove('overflow-hidden')
-//     event.preventDefault() 
-// })
