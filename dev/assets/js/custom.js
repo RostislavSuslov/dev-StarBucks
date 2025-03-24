@@ -139,4 +139,14 @@ if (x == 2) {
     console.log('не задовільняє жодних умов');
 }
 
- 
+const swiper = new Swiper('.swiper', {
+    spaceBetween: 48,
+    slidesPerView: 4,
+    loop: true,
+    // Navigation arrows
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+
+});

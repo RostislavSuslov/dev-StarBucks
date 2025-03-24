@@ -184,6 +184,7 @@ button {
         align-items: center;
         justify-content: center;
         padding: 12px;
+
         svg {
             height: 37px;
         }
@@ -271,6 +272,7 @@ button {
 .d-flex {
     display: flex;
     align-items: center;
+
     h3 {
         line-height: 1;
     }
@@ -301,7 +303,7 @@ button {
 }
 
 .bg-deeppink {
-    background: none deeppink!important;
+    background: none deeppink !important;
 }
 
 ::selection {
