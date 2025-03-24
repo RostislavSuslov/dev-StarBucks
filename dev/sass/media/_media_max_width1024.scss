@@ -190,6 +190,16 @@
         margin-bottom: 0;
     }
 
+    .we-make {
+        .container {
+            flex-direction: column;
+        }
+        
+        &__img-box {
+            margin-bottom: 100px;
+        }
+    }
+
     .footer {
         padding: 37px 0 7px;
 

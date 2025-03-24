@@ -74,7 +74,7 @@ play.addEventListener('click', () => {
 
 
 
- 
+
 
 burger.addEventListener('click', () => {
     burger.classList.toggle('active')
@@ -90,13 +90,8 @@ const overlay = document.querySelector('.overlay')
 const body = document.querySelector('body')
 
 function showModal() {
-    
-
     body.classList.add('overflow-hidden')
     overlay.classList.add('show')
-   
-
-   
 }
 
 function closeModal() {
@@ -115,9 +110,8 @@ modalTrigers.forEach((item) => {
         const modal = document.querySelector('#' + dataTriger)
 
         showModal()
-        
 
-        if(modal.classList.contains('video-provecess')) {
+        if (modal.classList.contains('video-procecess')) {
             modal.classList.add('show')
             playVideo()
         } else {
@@ -130,3 +124,19 @@ modalClose.forEach(close => {
     close.addEventListener('click', closeModal)
 })
 
+
+const x = 4
+
+if (x == 2) {
+    console.log('x == 2');
+} else if (x == 4) {
+    console.log('x == 4');
+} else if (x == 6) {
+    console.log('x == 6');
+} else if (x == 8) {
+    console.log('x == 8');
+} else {
+    console.log('не задовільняє жодних умов');
+}
+
+ 
