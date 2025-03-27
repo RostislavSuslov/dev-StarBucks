@@ -1,3 +1,13 @@
-@media screen and (max-width: 1399.99px) {
+@media screen and (max-width: 1560.99px) {
+    .сarousel-wrapper {
+        .swiper {
+            max-width: 929px;
+        }
+    }
 
+    .swiper-navigation {
+        max-width: 1168px;
+    }
 }
+
+@media screen and (max-width: 1399.99px) {}

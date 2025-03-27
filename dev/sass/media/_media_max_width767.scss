@@ -6,12 +6,18 @@
         }
     }
 
-
-
     .accent-label-sm {
         --size: 13.3vw;
         font-size: 18px;
     }
 
+    .сarousel-wrapper {
+        .swiper {
+            max-width: 277px;
+        }
+    }
 
+    .swiper-navigation {
+        max-width: 430px;
+    }
 }
