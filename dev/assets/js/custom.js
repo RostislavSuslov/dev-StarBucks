@@ -139,7 +139,7 @@ if (x == 2) {
     console.log('не задовільняє жодних умов');
 }
 
-const swiper = new Swiper('.swiper', {
+const swiperProduct = new Swiper('.swiper', {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 24,
@@ -149,24 +149,49 @@ const swiper = new Swiper('.swiper', {
     },
 
     breakpoints: {
- 
+
         768: {
-          slidesPerView: 2,
-          spaceBetween: 24,
+            slidesPerView: 2,
+            spaceBetween: 24,
         },
-        
+
         1026: {
-          slidesPerView: 2,
-          spaceBetween: 48,
+            slidesPerView: 2,
+            spaceBetween: 48,
         },
         1233: {
-          slidesPerView: 3,
-          spaceBetween: 48,
+            slidesPerView: 3,
+            spaceBetween: 48,
         },
-         
+
         1560: {
-          slidesPerView: 4,
-          spaceBetween: 48,
+            slidesPerView: 4,
+            spaceBetween: 48,
         }
     }
 });
+
+var init = false;
+var swiper;
+function swiperCard() {
+  if (window.innerWidth <= 768) {
+    if (!init) {
+      init = true;
+      swiper = new Swiper(".slider-cards-js", {
+        direction: "horizontal",
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 32,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    }
+  } else if (init) {
+    swiper.destroy();
+    init = false;
+  }
+}
+swiperCard();
+window.addEventListener("resize", swiperCard);
